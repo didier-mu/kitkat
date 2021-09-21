@@ -1,0 +1,134 @@
+.modal {
+
+	.modal-dialog{
+		max-width: 550px;
+	}
+
+	.modal-content,
+	.modal-body {
+		border-radius: 20px;
+	}
+
+	.modal-body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 60px 30px 30px;
+		text-align: center;
+		
+		h1{
+			color: var(--secundario);
+			font-size: var(--h2);
+			margin-bottom: 10px;
+		}
+
+		h4{
+			font-family: var(--primariaRegular);
+		}
+
+		
+		.imgSad{
+			max-width: 300px;
+			margin: 30px auto 0;
+		}
+
+		.boton {
+			margin: 30px auto;
+		}
+
+		.cajaRadios{
+			margin: 20px auto 0;
+		}
+
+		.folioCupon{
+			margin-top: 30px;
+			color: var(--secundario);
+		}
+
+	}
+
+	
+	.btnDescarga {
+		background: url(https://oxxo-com.s3.amazonaws.com/media-library/214c207b2318e02d8d13875cb4f5b29d.png) no-repeat 14% / 20px #fff;
+		padding-left: 10%;
+	}
+
+	.btnEnviar {
+		background: url(https://oxxo-com.s3.amazonaws.com/media-library/ae3b1912c6a9b5d3e28a4963940419bb.png) no-repeat 14% / 20px #fff;
+		padding-left: 10%;
+	}
+
+	.closeModal {
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		display: flex;
+		justify-content: flex-end;
+		z-index: 99;
+		background: none;
+		border: none;
+		appearance: none;
+		font-family: var(--secundariaRegular);
+		color: var(--secundario);
+		font-size: 2em;
+		cursor: pointer;
+
+		img {
+			width: 15px !important;
+		}
+	}
+
+	#cupon {
+		margin: 20px auto 10px;
+	}
+
+	#codigo {
+		max-height: 60px;
+		margin: auto;
+		display: block;
+	}
+
+	a {
+		text-decoration: none !important;
+	}
+
+
+
+	.modal-sesion,
+	.modal-cupon {
+		display: none;
+	}
+
+	.modal-cupon {
+		p {
+			margin: 20px auto 5px;
+		}
+
+		h4 {
+			margin: 10px auto;
+		}
+
+	}
+
+}
+
+// MOBILE
+@media (max-width:992px) {
+	.modal {
+		.modal-body{
+			h1 {
+				font-size: calc(30px + 10 * ((100vw - 320px) / 1280));
+			}
+
+			.imgSad{
+				max-width: 150px;
+			}
+		} 
+
+		.botonera {
+			flex-direction: column;
+		}
+	}
+	
+}
+

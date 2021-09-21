@@ -1,0 +1,280 @@
+.ruleta{
+  background:none;
+  min-height: auto;
+  background: var(--tercero);
+
+  .header{
+    background: url('https://oxxo-com.s3.amazonaws.com/media-library/0c6623449fe578920cdb9a75a271f8b1.png') no-repeat center top / cover;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      @include gradienteNegro;
+
+    }
+    
+    &--title{
+      margin: 20px auto;
+    }
+  }
+
+  .sombrero {
+    padding: 0 0 250px;
+    overflow: hidden;
+    background: url('https://oxxo-com.s3.amazonaws.com/media-library/59fd361e09f26ea46f913c2010ada449.png') no-repeat center top var(--tercero);
+    
+    background-size: 1500px;
+    position: relative;
+    
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100px;
+      @include gradienteCafe;
+    }
+
+    &--redes{
+        width: max-content;
+
+        h4{
+            text-align: center;
+            color: #fff;
+            font-family: var(--primariaRegular);
+            margin-bottom: 15px;
+        }
+
+        img{
+            margin: 0 10px;
+        }
+    }
+    
+    #botonGirar {
+        width: 100%;
+        max-width: 320px;
+        position: absolute;
+        right: -60px;
+        top: 30px;
+        cursor: pointer;
+        z-index: 99;
+    }
+
+    &__ruleta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+        position: relative;
+        transform-origin: top;
+        
+
+        #indicador {
+            position: absolute;
+            // top: calc(30px - 120 * ((100vw - 1280px) / 1920));
+            top: 50px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 4%;
+            max-width: 150px;
+            z-index: 9;
+        }
+
+        #copa {
+            position: absolute;
+            bottom: 150px;
+            width: 65%;
+            z-index: 9;
+        }
+
+        $smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+        #ala {
+
+            &.giroActivo {
+                transform: rotateZ(3600deg);
+            }
+
+            &.giroDefault {
+                transition: all 5s $smooth;
+                transform: rotateZ(0deg);
+            }
+
+
+            &.giro1 {
+                transition: all 5s $smooth;
+                transform: rotateZ(30deg);
+            }
+
+            &.giro2 {
+                transition: all 5s $smooth;
+                transform: rotate(90deg);
+            }
+
+            &.giro3 {
+                transition: all 5s $smooth;
+                transform: rotate(150deg);
+            }
+
+            &.giro4 {
+                transition: all 5s $smooth;
+                transform: rotate(205deg);
+            }
+
+            &.giro5 {
+                transition: all 5s $smooth;
+                transform: rotate(270deg);
+            }
+
+            &.giro6 {
+                transition: all 5s $smooth;
+                transform: rotate(325deg);
+            }
+        }
+    }
+  }
+}
+
+// FULL
+@media (min-width:1440px) {
+    .ruleta{
+        .header{
+            background-size: 1300px;
+        }
+
+        .sombrero{
+            background-size: 1500px;
+        }
+    }
+    
+}
+
+// MOBILE
+@media (max-width:992px) {
+  .ruleta{
+    background: #2c0707;
+
+      .header{
+        // background-size: calc(50px + 10 * ((100vw - 320px) / 1280));
+        padding-top: 30px;
+        background-position:center 150px;
+        min-height: auto;
+        padding-bottom: 0;
+
+        &--logo{
+            
+            #logoPromo{
+                width: 65%;
+            }
+
+            img:not(#logoPromo){
+                width: 30%;
+            }
+ 
+            &.active{
+ 
+             #ps5{
+                 left: 0px !important;
+                 top: 0px !important;
+             }
+             #earpods{
+                 left: -10px !important;
+                 top: 50px !important;
+             }
+             #kitkat{
+                 left: 0px !important;
+                 top: 80px !important;
+             }
+  
+             #paleta{
+                 right: 0px !important;
+                 top: 0px !important;
+             }
+             #alexa{
+                 right: -10px !important;
+                 top: 50px !important;
+             }
+             #ninendo{
+                 right: 0px !important;
+                 top: 80px !important;
+             }
+             #tablet{
+                 right: -10px !important;
+                 top: 110px !important;
+             }
+            }
+         
+        }
+         
+
+        &--bases {
+            margin: 50px auto 30px;
+            
+            ul{
+                margin-top: 20px;
+                align-items: center;
+                flex-direction: column;
+
+                li{
+                    padding: 70px 0 0;
+                    width: auto;
+                    margin-bottom: 20px;
+
+                    &:nth-child(2){
+                        margin-top: 0;
+                    }
+
+                    &::before{
+                        height: 60px;
+                        width:80px;
+                    }
+                }
+            }
+        }
+     
+    }
+
+      .sombrero {
+          background-position: center  calc(170px + 50 * ((100vw - 320px) / 640));
+          background-size: calc(500px + 900 * ((100vw - 320px) / 640));
+          padding-bottom: 10px;
+          background-color: #2c0707;
+
+          &::before{
+              display: none;
+          }
+
+          &--redes{
+              margin: 0px auto 20px;
+          }
+
+          #botonGirar{
+              right: 0;
+              top: 0;
+              position: relative;
+              width: 80%;
+              max-width: 280px;
+              margin: 40px auto 0;
+              display: block;
+          }
+
+          &__ruleta{
+              margin: 0;
+
+              #indicador{
+                  top: 15px;
+                  width: 7%;
+              }
+
+              #copa{
+                  bottom: 50px;
+              }
+          }
+      }
+  } 
+}
+

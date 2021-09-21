@@ -1,0 +1,48 @@
+doctype
+html(lang='es')
+	include includes/head.pug
+
+	body
+		main.home
+			section.header
+				.container
+					.row 
+						.col-12.header--title
+							h1 ¡Date un Break y descubre grandes premios!
+						
+						.col-12
+							.cajaSesion
+								h2 Inicia sesión
+
+								.checkboxes#checkboxLegales
+									input#checkLegale.checkbox(type='checkbox')
+									label.checkmark(for='checkLegale')  
+									label.labelLegales#labelLegales(for='checkLegale')
+										| Acepto los 
+										a(data-target='#modalLegales' data-toggle='modal' data-dismiss="modal") Términos y Condiciones
+
+								.checkboxes#checkboxEdad
+									input#checkEdad.checkbox(type='checkbox')
+									label.checkmark(for='checkEdad')  
+									label.labelLegales#labelEdad(for='checkEdad')
+										| Acepto que soy mayor de 18 años
+
+								h6 Tu información es 100% confidencial
+
+								.botonera
+									a.linkLogin(href="/cuponera/facebook")
+										img.img-fluid(src="https://oxxo-com.s3.amazonaws.com/media-library/06802e7de2ad723b72d81db87a6139ed.png" alt="Oxxo facebook")
+
+									a.linkLogin(href="/cuponera/google")
+										img.img-fluid(src="https://oxxo-com.s3.amazonaws.com/media-library/7d53a215af11103d63edf687bafc9ea1.png" alt="Oxxo google")
+
+						.col-12.header--logo
+							img.img-fluid#logoPromo(src="https://oxxo-com.s3.amazonaws.com/media-library/f9de12cf8ef8467f6f16996773276374.png", alt="")
+
+					
+
+			section.footer
+				.container
+					.row.justify-content-center
+						.col-12
+							h6 COME BIEN. Vigencia de la promoción 7 de Octubre al 20 de Noviembre del 2021. Consulte Términos y Condiciones en: oxxo.com/ruletaKitKat Marcas registradas usadas bajo licencia de su titular Société Des Produits Nestlé S.A.,Case Postale 353, 1800 Vevey, Suiza.

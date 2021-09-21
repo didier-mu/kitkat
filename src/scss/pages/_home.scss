@@ -1,0 +1,193 @@
+.home{
+    background: url('https://oxxo-com.s3.amazonaws.com/media-library/b9f2b76b950bef1ea6492afdabf7cbce.png') no-repeat center top / cover;
+    min-height: 1000px;
+
+    .header{
+        min-height: 600px;
+        padding: 50px 0 0;
+        
+      
+        &--title{
+            
+            h1 {
+                text-align: center;
+                color: #fff;
+                margin-bottom: 20px;
+                font-size: var(--h2);
+                text-shadow: 0px 6px 6px #000000;
+            }
+        }
+
+
+       &--logo{
+           display: flex;
+           justify-content: center;
+           margin: 0px auto 0;
+           position: relative;
+
+           #logoPromo{
+               max-width: 470px;
+               z-index: 1;
+           }
+
+           img:not(#logoPromo){
+               position: absolute;
+               width: 24%;
+               transform: scale(0);
+               
+               transition: .5s ease-in-out all;
+           }
+
+           &.active{
+            img:not(#logoPromo){
+                margin: auto;
+                transform: scale(1);
+            }
+
+            #ps5{
+                left: 160px !important;
+                top: 60px !important;
+            }
+            #earpods{
+                left: 120px !important;
+                top: 190px !important;
+            }
+            #kitkat{
+                left: 150px !important;
+                top: 260px !important;
+            }
+ 
+            #paleta{
+                right: 110px !important;
+                top: 0px !important;
+            }
+            #alexa{
+                right: 50px !important;
+                top: 120px !important;
+            }
+            #ninendo{
+                right: 100px !important;
+                top: 200px !important;
+            }
+            #tablet{
+                right: 70px !important;
+                top: 280px !important;
+            }
+           }
+        
+       }
+        
+       
+        &--bases{
+            margin: 200px auto 30px;
+
+            h2{
+                text-align: center;
+                color: #fff;
+                text-shadow: 0px 6px 6px #000000CE;
+            }
+
+            ul{
+                counter-reset: paso;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                margin-top: 0px;
+                padding: 0;
+
+                li{
+                    font-size: var(--h3);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 110px 20px 0;
+                    position: relative;
+                    margin: 0 15px;
+                    text-align: center;
+                    width: calc(100% / 3);
+                    font-family: var(--primariaRegular);
+                    
+                    &::before {
+                        content: counter(paso) ".";
+                        counter-increment: paso;
+                        position: absolute;
+                        background: url('https://oxxo-com.s3.amazonaws.com/media-library/c15932ef11302e59bcf58442ca6fc8bb.png') no-repeat center bottom/ contain;
+                        top: 0px;
+                        width: 130px;
+                        height: 110px;
+                        color: var(--primario);
+                        text-align: center;
+                        font-size: var(--h1);
+                        font-family: var(--secundariaRegular);
+                        text-shadow: 0px 6px 6px #000000;
+                    }
+
+                    &:nth-child(2){
+                        margin-top: 50px;
+                    }
+                }
+            }
+
+            
+        }
+
+    }
+
+    section.footer{
+        padding: 20px 0;
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+
+        h6{
+            color: #fff;
+            text-align: center;
+            font-family: var(--primariaRegular);
+        }
+    }
+}
+
+
+// FULL
+@media (min-width:1440px) {
+    .home{
+        background-position-y: -250px;
+    }
+}
+
+
+// MOBILE
+@media (max-width:992px) {
+    .home{
+        background:none;
+        min-height: auto;
+        
+        .header{
+            background: url('https://oxxo-com.s3.amazonaws.com/media-library/02a916c9b84fdb5223385a931cb391ff.png') no-repeat center bottom / 130% var(--tercero);
+            padding-bottom: 100px;
+
+            &--title{
+                h1{
+                    font-size: var(--h1);
+                }
+            }
+
+            &--logo{
+                img{
+                    max-width: none;
+                    width: 90%;
+                }
+            }
+        }
+
+        section.footer{
+            position: relative;
+            bottom: auto;
+            background:var(--tercero);
+        }
+
+    } 
+}
+
+// 996 

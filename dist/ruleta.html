@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="preload" href="css/styles.min.css" as="style">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>OXXO </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/jquery-3.4.1.min.js"> </script>
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/modernizr.js"> </script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/functionsRuleta.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <main class="home ruleta">
+      <section class="header">
+        <div class="container">
+          <div class="row"> 
+            <div class="col-12 header--title">
+              <h1>¡Date un Break y descubre grandes premios!</h1>
+            </div>
+            <div class="col-12 header--logo"><img class="img-fluid" id="logoPromo" src="https://oxxo-com.s3.amazonaws.com/media-library/0cdf1eb5f59b547152758ff795d69676.png" alt=""><img class="img-fluid" id="ps5" src="https://oxxo-com.s3.amazonaws.com/media-library/430104bc84f6d4736fc05976ffa1d9f4.png" alt=""><img class="img-fluid" id="earpods" src="https://oxxo-com.s3.amazonaws.com/media-library/95f96054279dde2240e0d8e9bdb95766.png" alt=""><img class="img-fluid" id="kitkat" src="https://oxxo-com.s3.amazonaws.com/media-library/110ea3a26ba8caead468c3fe3f6d9a1f.png" alt=""><img class="img-fluid" id="paleta" src="https://oxxo-com.s3.amazonaws.com/media-library/78dcd0f511265642f119076e19864eb4.png" alt=""><img class="img-fluid" id="alexa" src="https://oxxo-com.s3.amazonaws.com/media-library/fea9ba641b11bfc98abb579a4e3ef997.png" alt=""><img class="img-fluid" id="ninendo" src="https://oxxo-com.s3.amazonaws.com/media-library/8fdc2e7c2a224dd434555dcaf21a85b1.png" alt=""><img class="img-fluid" id="tablet" src="https://oxxo-com.s3.amazonaws.com/media-library/0b3c6d6d30f13c66e8edca39f8b48062.png" alt=""></div>
+          </div>
+          <div class="row header--bases">
+            <div class="col-12"> 
+              <h2>¿Cómo participo?</h2>
+              <ul> 
+                <li>Gira la ruleta</li>
+                <li>Descubre tu premio</li>
+                <li>Regístrate y responde la pregunta</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sombrero">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+              <div class="sombrero--redes"> 
+                <h4>Síguenos en</h4><a class="text-decoration-none" href="http://" target="_blank" rel="noopener noreferrer"> <img class="img-fluid" src="https://oxxo-com.s3.amazonaws.com/media-library/a148bbcaf6477f9ac0aea4ccd5026a9d.png" alt=""></a><a class="text-decoration-none" href="http://" target="_blank" rel="noopener noreferrer"> <img class="img-fluid" src="https://oxxo-com.s3.amazonaws.com/media-library/b74cebd5637d63e91bb379c56695190b.png" alt=""></a><a class="text-decoration-none" href="http://" target="_blank" rel="noopener noreferrer"> <img class="img-fluid" src="https://oxxo-com.s3.amazonaws.com/media-library/f7f0b4fca438ba325ae5dab7302139c6.png" alt=""></a>
+              </div><img class="img-fluid" id="botonGirar" src="https://oxxo-com.s3.amazonaws.com/media-library/d1677b5c164a4d514b23a3cb21f5e8e2.png" alt="">
+              <div class="sombrero__ruleta"><img class="img-fluid" id="indicador" src="https://oxxo-com.s3.amazonaws.com/media-library/0c2359ca8cb93217387921d487eb26b7.png" alt=""><img class="img-fluid" id="copa" src="https://oxxo-com.s3.amazonaws.com/media-library/f9de12cf8ef8467f6f16996773276374.png" alt=""><img class="img-fluid" id="ala" src="https://oxxo-com.s3.amazonaws.com/media-library/1cc4e5c828973c23351be5d0de82d5fe.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <h6>COME BIEN. Vigencia de la promoción 7 de Octubre al 20 de Noviembre del 2021. Consulte Términos y Condiciones en: oxxo.com/ruletaKitKat Marcas registradas usadas bajo licencia de su titular Société Des Produits Nestlé S.A.,Case Postale 353, 1800 Vevey, Suiza.</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="closeModal" data-dismiss="modal" aria-label="Close">x</div>
+            <div class="modal-body">
+              <h1> <b>¡Te faltó muy poco!</b></h1>
+              <h4>Sigue intentando que ese cupón espera por ti</h4><img class="img-fluid imgSad" src="https://oxxo-com.s3.amazonaws.com/media-library/206f051c8c9b99ecbd0f4ba01c1f9878.png" alt="OXXO">
+              <input class="boton primario btnOn" type="button" value="Intentar de nuevo" data-dismiss="modal" aria-label="Close">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modalCupon" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="closeModal" data-dismiss="modal" aria-label="Close">x</div>
+            <div class="modal-body modal-felicidades">
+              <h1> <b>¡FELICIDADES!</b></h1>
+              <h4>Has ganado un cupón</h4><img class="img-fluid" id="cupon" src="../img/cupon.jpeg" alt=""><a class="linkCupon">
+                <input class="btnOn boton primario" type="button" value="Obtener cupón"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modalCuponEspecial" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="closeModal" data-dismiss="modal" aria-label="Close">x</div>
+            <div class="modal-body modal-felicidades">
+              <h1> <b>¡Felicidades!</b></h1>
+              <h4>Has ganado un premio especial <br>este es tu número de folio:</h4>
+              <h2 class="folioCupon">ADN00987654321</h2>
+              <input class="boton primario btnOn" type="button" value="Volver a girar" data-dismiss="modal" aria-label="Close">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modalPregunta" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="closeModal" data-dismiss="modal" aria-label="Close">x</div>
+            <div class="modal-body modal-felicidades">
+              <h1> <b>¿Cuál es el nombre de la ruleta?</b></h1>
+              <div class="cajaRadios">
+                <div class="radios"> 
+                  <input id="radio1" type="radio" name="preguntas" value="x">
+                  <label for="radio1">La Ruleta del Break</label>
+                </div>
+                <div class="radios"> 
+                  <input id="radio2" type="radio" name="preguntas" value="y">
+                  <label for="radio2">La Ruleta de Helados Nestlé</label>
+                </div>
+              </div>
+              <input class="boton primario btnOn" id="btnPregunta" type="button" value="Enviar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
