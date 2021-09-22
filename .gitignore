@@ -48,3 +48,9 @@ Temporary Items
 # dist/
 src/.vscode
 src/.htaccess
+
+css/
+fonts/
+img/
+js/
+*.html
