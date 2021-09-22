@@ -98,7 +98,9 @@ $(function () {
     randomCupon();
   });
 
-  $("#modalDefault .btnOn, .closeModal").on("click", function () {
+  $(
+    "#modalDefault .btnOn, #modalPreguntaError .btnOn, #modalCuponEspecial .btnOn, .closeModal"
+  ).on("click", function () {
     $("#ala").attr("class", "img-fluid");
     $(".modal-felicidades").show(1);
     $(".modal-cupon").hide();
@@ -118,7 +120,7 @@ $(function () {
         $("#modalCuponEspecial").modal().show;
       } else if (valorPregunta == "y") {
         $(".modal").modal("hide");
-        $("#modalDefault").modal().show;
+        $("#modalPreguntaError").modal().show;
       }
     });
   }

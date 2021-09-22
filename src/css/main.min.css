@@ -956,6 +956,11 @@ body .ruleta .sombrero__ruleta #ala.giro6 {
   margin: 10px auto;
 }
 
+.modal#modalPreguntaError h2 {
+  color: var(--secundario);
+  margin: 10px auto;
+}
+
 @media (max-width:992px) {
   .modal .modal-body h1 {
     font-size: calc(30px + 10 * ((100vw - 320px)/ 1280));

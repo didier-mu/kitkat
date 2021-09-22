@@ -21,7 +21,7 @@ function validacionSesion2(nameCheck, mensaje) {
 }
 
 $(function () {
-  // $("#modalCupon").modal().show;
+  // $("#modalPreguntaError").modal().show;
 
   setTimeout(function () {
     $(".header--logo").addClass("active");
